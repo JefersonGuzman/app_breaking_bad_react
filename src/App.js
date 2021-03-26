@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import Frase from './components/Frase'
 
@@ -48,7 +48,10 @@ function App() {
  
   }
 
- 
+ //Cargar una frase
+ useEffect(() => {
+    consultarAPI();
+ },[])
 
   return (
     <Contenedor>
